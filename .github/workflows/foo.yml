@@ -4,7 +4,7 @@ on: repository_dispatch
 
 jobs:
   build:
-    if: startsWith(github.event.action, 'foobar')
+    if: startsWith(github.event.client_payload.foo, 'ba')
     # Job name is Greeting
     name: Greeting
     # This job runs on Linux
