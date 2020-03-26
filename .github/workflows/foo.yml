@@ -4,6 +4,7 @@ on: repository_dispatch
 
 jobs:
   build:
+    if: github.event.action == 'foobar'
     # Job name is Greeting
     name: Greeting
     # This job runs on Linux
